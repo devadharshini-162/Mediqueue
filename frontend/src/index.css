@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply bg-hospital-600 text-white hover:bg-hospital-700 shadow-lg shadow-hospital-200;
+  }
+  .btn-secondary {
+    @apply bg-white text-hospital-700 border border-hospital-200 hover:bg-hospital-50;
+  }
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-hospital-500 focus:border-transparent transition-all;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-xl shadow-slate-200/60 p-6 border border-slate-100;
+  }
+}
+
+.gradient-hospital {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
